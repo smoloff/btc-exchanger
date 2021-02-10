@@ -13,19 +13,23 @@
 
 <body>
   <div class="wrapper">
-    <div class="form-card">
+    
+    <div class="form-card">      
       <form>
         <div class="column">
+          <div class="form-card-info">
+            <p><strong>Bitcoin exchange rate <br><span>1 Bitcoin equals</span><br> 42,921.60 United States Dollar</strong></p>        
+          </div>
           <div class="form-element">
             <label for="usd-input">USD</label>
-            <input type="number" class="form-input">
+            <input type="number" class="form-input"  value="42921" id="usd-cource">
           </div>
           <div class="form-element">
             <label for="BTC-input">Bitcoin</label>
-            <input type="number" class="form-input">
+            <input type="number" class="form-input" placeholder="1" value="1" id="btc-cource">
           </div>
           <div class="form-element">
-            <button>Exchange</button>
+            <button id="exchange">Exchange</button>
           </div>
         </div>
       </form>
