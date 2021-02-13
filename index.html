@@ -21,12 +21,12 @@
             <p><strong>Bitcoin exchange rate <br><span>1 Bitcoin equals</span><br> 42,921.60 United States Dollar</strong></p>        
           </div>
           <div class="form-element">
-            <label for="usd-input" id="usd-label">USD</label>
-            <input type="number" class="form-input"  value="42921" id="usd-cource">
+            <label for="usd-input" id="label1">USD</label>
+            <input type="number" class="form-input" value="42961.6"  id="usdCource" name="usd-input" placeholder="42961.6">
           </div>
           <div class="form-element">
-            <label for="BTC-input" id="btc-label">Bitcoin</label>
-            <input type="number" class="form-input" placeholder="1" value="1" id="btc-cource">
+            <label for="btc-input" id="label2">Bitcoin</label>
+            <input type="number" class="form-input" value="1"  id="btcCource" name="btc-input" placeholder="1" >
           </div>
           <div class="form-element">
             <button id="exchange">Exchange</button>
@@ -35,10 +35,11 @@
       </form>
     </div>
   </div>
-  <div class="button">
-    <button class="reassing"></button>
+  <div>
+    <label for="re-assign-currency" class="label-re-assign-currency"></label>
+    <input type="checkbox" id="re-assign-currency" name="re-assign-currency">
 
-  <script src="form.js"></script>
+  <script src="./form.js"></script>
 </body>
 
 </html>
