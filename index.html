@@ -6,27 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 
 <body>
+  <div class="header">
+    <div class="logo_holder"><span>Cryptex</span></div>
+    <div class="navigation">
+      <nav>
+        <ul>
+          <li>Markets</li>
+          <li>Exchange</li>
+        </ul>
+      </nav>
+    </div>
+  </div>
   <div class="wrapper">
-    
-    <div class="form-card">      
+
+    <div class="form-card">
       <form>
         <div class="column">
           <div class="form-card-info">
-            <p><strong>Bitcoin exchange rate <br><span>1 Bitcoin equals</span><br> 42,921.60 United States Dollar</strong></p>        
+            <p><strong>Bitcoin exchange rate <br><span>1 Bitcoin equals</span><br> 42,921.60 United States
+                Dollar</strong></p>
           </div>
           <div class="form-element">
             <label for="usd-input" id="label1">USD</label>
-            <input type="number" class="form-input" value="42961.6"  id="usdCource" name="usd-input" placeholder="42961.6">
+            <input type="number" class="form-input" value="42961.6" id="usdCource" name="usd-input"
+              placeholder="42961.6" disabled>
           </div>
           <div class="form-element">
             <label for="btc-input" id="label2">Bitcoin</label>
-            <input type="number" class="form-input" value="1"  id="btcCource" name="btc-input" placeholder="1" >
+            <input type="number" class="form-input" value="1" id="btcCource" name="btc-input" placeholder="1">
           </div>
           <div class="form-element">
             <button id="exchange">Exchange</button>
@@ -34,12 +47,47 @@
         </div>
       </form>
     </div>
-  </div>
-  <div>
-    <label for="re-assign-currency" class="label-re-assign-currency"></label>
-    <input type="checkbox" id="re-assign-currency" name="re-assign-currency">
 
-  <script src="./form.js"></script>
+    <div class="coins_table">
+      <div class="coins_table_header">
+        <span>Name</span>
+        <span>Last price</span>
+        <span>24h Change</span>
+      </div>
+      <div class="coins_table_body">        
+          <div class="coins_list">
+            <ul class="coin">
+              <li>BNB <span class="grey">BNB</span></li>
+              <li>$<span>130.10</span></li>
+              <li>-2.39%</li>
+            </ul>
+            <ul class="coin">
+              <li>BTC <span class="grey">Bitcoin</span></li>
+              <li>$<span>42,921.60</span></li>
+              <li>-2.39%</li>
+            </ul>
+            <ul class="coin">
+              <li>ETH <span class="grey">Etherium</span></li>
+              <li>$<span>1,800.80</span></li>
+              <li>+0.61%</li>
+            </ul>
+            <ul class="coin">
+              <li>DOGE <span class="grey">Dogecoin</span></li>
+              <li>$<span>0.067940</span></li>
+              <li>-0.99%</li>
+            </ul>
+          </div>
+        </div>
+      
+      <div class="coins_table_footer">
+        <span>View more results</span>
+      </div>
+    </div>
+    <div>
+      <label for="re-assign-currency" class="label-re-assign-currency"></label>
+      <input type="checkbox" id="re-assign-currency" name="re-assign-currency">
+
+      <script src="./form.js"></script>
 </body>
 
 </html>
