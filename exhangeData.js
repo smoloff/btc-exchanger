@@ -27,30 +27,24 @@ let exchangeData = [
     },
 ];
 
-const coinList = document.getElementById('coins_list'); // привязывается id куда вешать html
-
-
+//отображение на экране
 const renderCoinList = (name, fullname, lastPrice, Change24h) => `
-
-<li>${name}<span class="grey">${fullname}</span></li> 
-<li><span>${lastPrice}</span></li>
-<li class="change_color">${Change24h}%</li>
-
+<ul>
+<li>${name} <span class="grey">${fullname}</span></li>
+<li>${lastPrice}</li>
+<li class=${(Change24h > 0) ? "blue" : "red"}>${Change24h}</li>
+</ul>
 `
 ;
 
-
 const renderCoinListToHtml = () => {
-let htmlItemS='';
-exchangeData.forEach(currency => {
-    let htmlItem = renderCoinList(currency.name, currency.fullname, currency.lastPrice, currency.Change24h); // почему здесь применяется currency.name, а в функции renderCoinList просто ключ name?
-    // console.log(currency.name, currency.fullname, currency.lastPrice, currency.Change24h); // работает идеально!  
-    htmlItemS += htmlItem;    
-    
-})  
-coinListCnt.innerHTML = htmlItemS;
+    let htmlItemS=''; //переменнная для помещения всех сгенерированных htmlItem
+    exchangeData.forEach(currency => {
+        let htmlItem = renderCoinList(currency.name,currency.fullname, currency.lastPrice, currency.Change24h);
+        htmlItemS = htmlItemS + htmlItem;
+        console.log(currency.Change24h)
+    })
+    coinListCnt.innerHTML = htmlItemS;
 }
 
 renderCoinListToHtml();
-
-

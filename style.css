@@ -165,6 +165,7 @@ input[type=number] {
   grid-template-columns: 3fr 3fr 1.5fr;  
   font-size: 20px;
   font-weight: 700;
+  margin-left: 20px;
 }
 
 .coin li {  
